@@ -1,6 +1,7 @@
 import assemblyai as aai
 import pandas as pd
 import os
+import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
 aai.settings.api_key = os.getenv("SETTINGS_API_KEY")
