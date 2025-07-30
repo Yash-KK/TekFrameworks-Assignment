@@ -73,5 +73,5 @@ streamlit run app.py
 ```
 
 ### 🎥 Demo
-https://github.com/user-attachments/assets/7dceacb5-a62f-4b7e-af38-434d1630ab8c
+https://github.com/user-attachments/assets/6873f282-0c12-46d9-9bfb-bdbc452b2bb5
 
