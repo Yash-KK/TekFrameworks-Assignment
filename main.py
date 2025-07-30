@@ -11,10 +11,8 @@ def get_conversation(df):
 def process_audio(audio_file_path):
     assembly_transcriber = AssemblyAudioTranscription()
     result_1 = assembly_transcriber.transcribe_audio(audio_file_path) 
-    print("result: ", result_1)
 
     df = assembly_transcriber.df_conversion(result_1)
-    print("df: ", df)
 
     analyzer = SentimentAnalysis(df)
     analyzer.add_sentiment_analysis()
@@ -25,12 +23,7 @@ def process_audio(audio_file_path):
 
     final_df = mapper.map_speakers()
 
-    print("FINAL DF: ", final_df)
-
     return final_df
-
-
-
 
 if __name__ == "__main__":
     audio_file_path = "/home/yash/Desktop/TekF/audio_file/AI.wav"
