@@ -10,7 +10,8 @@ aai.settings.api_key = os.getenv("SETTINGS_API_KEY")
 
 class AssemblyAudioTranscription:
     def transcribe_audio(self, audio_file):
-        config = aai.TranscriptionConfig(speaker_labels=True)
+        config = aai.TranscriptionConfig(speaker_labels=True,
+)
         try:
             transcript = aai.Transcriber().transcribe(audio_file, config)
             return transcript

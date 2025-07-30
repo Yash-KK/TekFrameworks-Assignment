@@ -29,8 +29,9 @@ def get_conversation(df):
 st.title("Visualization of the Audio Processing Pipeline")
 st.image(img_path, caption="Speech To Text Analysis", use_container_width=True)
 
-st.sidebar.title("Options")
-option = st.sidebar.selectbox("Choose an option", ("Upload an audio file(wav, mp3)", "Use default audio"))
+
+UPLOAD_OPTION = "Upload an audio file (wav, mp3)"
+DEFAULT_OPTION = "Use default audio"
 
 
 def display_data(df):
@@ -53,7 +54,9 @@ def display_data(df):
     st.write("### Conversation Review")
     st.write(review_output)
 
-if option == "Upload an audio file":
+option = st.sidebar.selectbox("Choose an option", (UPLOAD_OPTION, DEFAULT_OPTION))
+
+if option == UPLOAD_OPTION:
     uploaded_file = st.sidebar.file_uploader("Choose an audio file", type=["wav", "mp3"])
     if uploaded_file is not None:
         file_path = save_uploaded_file(uploaded_file)
@@ -61,7 +64,7 @@ if option == "Upload an audio file":
             st.sidebar.success("File uploaded successfully!")
             df = process_audio(file_path)
             display_data(df)
-elif option == "Use default audio":
+elif option == DEFAULT_OPTION:
     default_audio_path = "audio_file/AI.wav"
     df = process_audio(default_audio_path)
     display_data(df)
