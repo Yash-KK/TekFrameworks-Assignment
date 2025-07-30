@@ -1,6 +1,6 @@
 #  Speech to Text Analysis
 
-This project analyzes customer support calls to extract structured insights using speech-to-text, sentiment analysis, and large language models.
+This project analyzes audio to extract structured insights using speech-to-text, sentiment analysis, and large language models.
 
 <img width="631" height="592" alt="Screenshot from 2025-07-30 17-02-52" src="https://github.com/user-attachments/assets/67c8048d-3ae8-4f36-b503-0874acce2681" />
 
@@ -19,7 +19,10 @@ This project analyzes customer support calls to extract structured insights usin
   Feeds structured call data into an LLM (via [LangChain](https://www.langchain.com/)) to generate:
   - Call Summary  
   - Key Discussion Topics  
-  - Speaker-wise Feedback  
+  - Speaker-wise Feedback
+  
+- **Streamlit Web Interface**  
+  Clean, interactive UI to upload audio files, view transcripts, sentiment charts, and AI-generated summaries in real time.
 
 ---
 
@@ -68,3 +71,7 @@ SETTINGS_API_KEY=your_assemblyai_api_key
 ```bash
 streamlit run app.py
 ```
+
+### 🎥 Demo
+https://github.com/user-attachments/assets/7dceacb5-a62f-4b7e-af38-434d1630ab8c
+
