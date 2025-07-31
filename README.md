@@ -75,3 +75,12 @@ streamlit run app.py
 ### 🎥 Demo
 https://github.com/user-attachments/assets/6873f282-0c12-46d9-9bfb-bdbc452b2bb5
 
+# 🎙️ API Endpoint
+Run the API
+
+```bash
+uvicorn api:app --reload
+```
+### API Full Pipeline Demo 
+https://github.com/user-attachments/assets/1c4bb2a6-1531-4ca6-8bda-fe2fc57dd14a
+
